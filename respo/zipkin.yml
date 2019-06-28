@@ -3,6 +3,10 @@ spring:
     name: itoken-zipkin
   main:
     allow-bean-definition-overriding: true
+  boot:
+    admin:
+      client:
+        api-path: localhost:8084
 server:
   port: 9411
 

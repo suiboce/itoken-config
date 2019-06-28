@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/www5978058/springcloud-config.git
           search-paths: respo
           username: www5978058
-          password: ******
+          password: *******
 
 server:
   port: 8888
