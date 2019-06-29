@@ -10,6 +10,9 @@ spring:
 server:
   port: 8761
 
+---
+spring:
+  profiles: dev
 eureka:
   instance:
     hostname: localhost
@@ -20,8 +23,13 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 ---
 spring:
-  profiles: dev
-
----
-spring:
   profiles: prod
+eureka:
+  instance:
+    hostname: 192.168.79.129
+  client:
+    # 集群情况下需将自己注册进入Eureka
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/
