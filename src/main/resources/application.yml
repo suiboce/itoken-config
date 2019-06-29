@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/suiboce/itoken-config.git
           search-paths: respo
           username: www5978058
-          password: ******
+          password: zxc5aiqi
   profiles:
     active: dev
 
