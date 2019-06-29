@@ -26,10 +26,10 @@ spring:
   profiles: prod
 eureka:
   instance:
-    hostname: 192.168.79.129
+    hostname: 192.168.79.135
   client:
     # 集群情况下需将自己注册进入Eureka
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/,http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761}/eureka/,http://${eureka.instance.hostname}:8861/eureka/,http://${eureka.instance.hostname}:8961/eureka/
