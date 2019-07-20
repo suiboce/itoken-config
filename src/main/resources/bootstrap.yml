@@ -6,10 +6,10 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/suiboce/itoken-config.git
+          uri: http://192.168.79.129/itoken/itoken-config.git
           search-paths: respo
-          username: www5978058
-          password: 123456
+          username: root
+          password: 12345678
   profiles:
     active: dev
 
